@@ -126,7 +126,7 @@ func main() {
 	}
 
 	// seed random number generator
-	rand.Seed(time.Now().UTC().UnixNano())
+	rand.New(rand.NewSource(time.Now().UTC().UnixNano()))
 
 	// determine worker count
 	if Workers < 1 {
